@@ -47,3 +47,10 @@ tasks.withType<KotlinCompile> {
 		jvmTarget = "11"
 	}
 }
+
+appengine {
+	deploy {
+		projectId = ${GOOGLE_CLOUD_PROJECT}
+		version = "1"
+	}
+}
