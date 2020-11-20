@@ -3,6 +3,9 @@
 Cloud Identity-Aware Proxy (IAP) provides a security layer over applications deployed to Google Cloud.
 
 ## Description
+### Dependencies
+- org.springframework.cloud
+  - spring-cloud-gcp-starter-security-iap
 
 ## Demo
 
