@@ -3,7 +3,6 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	id("org.springframework.boot") version "2.4.0"
 	id("io.spring.dependency-management") version "1.0.10.RELEASE"
-	id("com.google.cloud.tools.appengine") version "2.4.1"
 	kotlin("jvm") version "1.4.10"
 	kotlin("plugin.spring") version "1.4.10"
 }
@@ -45,12 +44,5 @@ tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
 		jvmTarget = "11"
-	}
-}
-
-appengine {
-	deploy {
-		projectId = ${GOOGLE_CLOUD_PROJECT}
-		version = "1"
 	}
 }
