@@ -24,10 +24,13 @@ Override `configure(http: HttpSecurity?)` funtion
 
 The following is very basic sample to authenticate request for ANY.
 
+- anyrequest(): Any Request to this HTTP Access
+- authenticated(): Need to access with Authentication
+
 ```kotlin
 override fun configure(http: HttpSecurity?) {
     http?.authorizeRequests()
-            ?.anyrequest?.authenticated()
+            ?.anyrequest()?.authenticated()
 }
 ```
 
