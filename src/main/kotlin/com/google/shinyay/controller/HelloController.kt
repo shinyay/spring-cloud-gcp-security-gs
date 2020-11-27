@@ -18,5 +18,7 @@ class HelloController {
     }
 
     @GetMapping("/security")
-    fun securedAccess() {}
+    fun securedAccess() {
+
+    }
 }
