@@ -11,6 +11,9 @@ Cloud Identity-Aware Proxy (IAP) provides a security layer over applications dep
 #### Enable Web Security with **WebSecurityConfigurerAdapter**
 Extend `WebSecurityConfigurerAdapter` to provide a default configuration.
 
+- `WebSecurityConfigurerAdapter`
+- `@EnableWebSecurity`
+
 ```kotlin
 @EnableWebSecurity
 class SecurityConfig : WebSecurityConfigurerAdapter() {}
