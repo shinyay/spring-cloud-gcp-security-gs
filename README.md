@@ -34,6 +34,18 @@ override fun configure(http: HttpSecurity?) {
 }
 ```
 
+#### Specify secured access path
+
+- `antMatchers("/<ACCESS_PATH>")`
+
+```kotlin
+override fun configure(http: HttpSecurity?) {
+    http?.authorizeRequests()
+            ?.antMatchers("/security")?.authenticated()
+}
+```
+
+
 ## Demo
 
 ## Features
