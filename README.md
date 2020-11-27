@@ -22,6 +22,15 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {}
 #### Enable HTTP Security
 Override `configure(http: HttpSecurity?)` funtion
 
+The following is very basic sample to authenticate request for ANY.
+
+```kotlin
+override fun configure(http: HttpSecurity?) {
+    http?.authorizeRequests()
+            ?.anyrequest?.authenticated()
+}
+```
+
 ## Demo
 
 ## Features
