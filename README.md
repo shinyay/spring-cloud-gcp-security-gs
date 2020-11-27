@@ -19,6 +19,9 @@ Extend `WebSecurityConfigurerAdapter` to provide a default configuration.
 class SecurityConfig : WebSecurityConfigurerAdapter() {}
 ```
 
+#### Enable HTTP Security
+Override `configure(http: HttpSecurity?)` funtion
+
 ## Demo
 
 ## Features
