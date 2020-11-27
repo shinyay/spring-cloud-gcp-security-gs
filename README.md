@@ -7,6 +7,15 @@ Cloud Identity-Aware Proxy (IAP) provides a security layer over applications dep
 - org.springframework.cloud
   - spring-cloud-gcp-starter-security-iap
 
+### Spring Security Configuration
+#### Enable Web Security with **WebSecurityConfigurerAdapter**
+Extend `WebSecurityConfigurerAdapter` to provide a default configuration.
+
+```kotlin
+@EnableWebSecurity
+class SecurityConfig : WebSecurityConfigurerAdapter() {}
+```
+
 ## Demo
 
 ## Features
