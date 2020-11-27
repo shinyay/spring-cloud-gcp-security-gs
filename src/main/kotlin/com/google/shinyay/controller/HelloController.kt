@@ -16,4 +16,7 @@ class HelloController {
         logger.info(dateAndTime)
         return "Hello at $dateAndTime"
     }
+
+    @GetMapping("/security")
+    fun securedAccess() {}
 }
