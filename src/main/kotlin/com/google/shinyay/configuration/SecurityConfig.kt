@@ -10,7 +10,7 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
 
     override fun configure(http: HttpSecurity?) {
         http?.authorizeRequests()
-                ?.antMatchers("/")?.authenticated()
+                ?.antMatchers("/security")?.authenticated()
                 ?.and()
                 ?.oauth2ResourceServer()?.jwt()
                 ?.and()
