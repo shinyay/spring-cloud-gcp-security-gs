@@ -1,6 +1,8 @@
 # Spring Cloud GCP with Cloud Identity-Aware Proxy (IAP) Authentication
 
 Cloud Identity-Aware Proxy (IAP) provides a security layer over applications deployed to Google Cloud.
+Cloud IAP inject `x-goog-iap-jwt-assertion` to HTTP Header.
+Spring Security extracts user identity from **x-goog-iap-jwt-assertion**.
 
 ## Description
 ![oauth2](https://user-images.githubusercontent.com/3072734/100515715-7701fc00-31c1-11eb-9bef-65dd5c16d7fc.png)
