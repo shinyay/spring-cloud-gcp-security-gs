@@ -88,6 +88,12 @@ override fun configure(http: HttpSecurity?) {
 }
 ```
 
+### Retrieve authentication for the current request
+
+```kotlin
+val authentication = SecurityContextHolder.getContext().authentication
+```
+
 ## Demo
 
 ## Features
