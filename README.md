@@ -94,6 +94,12 @@ override fun configure(http: HttpSecurity?) {
 val authentication = SecurityContextHolder.getContext().authentication
 ```
 
+### Retrieve Principal which contains Authenticated user information
+
+```kotlin
+val jwt: Jwt = authentication.principal as Jwt
+```
+
 ## Demo
 
 ## Features
