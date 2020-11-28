@@ -1,6 +1,7 @@
 package com.google.shinyay.controller
 
 import com.google.shinyay.logger
+import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 import java.time.ZoneId
@@ -19,6 +20,6 @@ class HelloController {
 
     @GetMapping("/security")
     fun securedAccess() {
-
+        val authentication = SecurityContextHolder.getContext().authentication
     }
 }
