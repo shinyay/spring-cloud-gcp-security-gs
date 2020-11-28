@@ -64,6 +64,15 @@ override fun configure(http: HttpSecurity?) {
 
 - `authenticationEntryPoint()`
 
+|AuthenticationEntryPoint implemented Class|Explanation|
+|------------------------------------------|-----------|
+|BasicAuthenticationEntryPoint||
+|BearerTokenAuthenticationEntryPoint||
+|DelegatingAuthenticationEntryPoint||
+|DigestAuthenticationEntryPoint||
+|Http403ForbiddenEntryPoint||
+|LoginUrlAuthenticationEntryPoint||
+
 ```kotlin
 override fun configure(http: HttpSecurity?) {
     http?.authorizeRequests()
