@@ -66,12 +66,12 @@ override fun configure(http: HttpSecurity?) {
 
 |AuthenticationEntryPoint implemented Class|Explanation|
 |------------------------------------------|-----------|
-|BasicAuthenticationEntryPoint||
+|BasicAuthenticationEntryPoint|401 Error for Basic Authentication|
 |BearerTokenAuthenticationEntryPoint||
 |DelegatingAuthenticationEntryPoint||
-|DigestAuthenticationEntryPoint||
-|Http403ForbiddenEntryPoint||
-|LoginUrlAuthenticationEntryPoint||
+|DigestAuthenticationEntryPoint|401 Error for Digest Authentication|
+|Http403ForbiddenEntryPoint|403 Error|
+|LoginUrlAuthenticationEntryPoint|Display Login Form|
 
 ```kotlin
 override fun configure(http: HttpSecurity?) {
