@@ -60,6 +60,21 @@ override fun configure(http: HttpSecurity?) {
 }
 ```
 
+#### Handle when Authentication is failed
+
+- `authenticationEntryPoint()`
+
+```kotlin
+override fun configure(http: HttpSecurity?) {
+    http?.authorizeRequests()
+            ?.antMatchers("/security")?.authenticated()
+            ?.and()
+            ?.oauth2ResourceServer()?.jwt()
+            ?.and()
+            ?.authenticationEntryPoint(Http403ForbiddenEntryPoint())
+}
+```
+
 ## Demo
 
 ## Features
