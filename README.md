@@ -45,6 +45,20 @@ override fun configure(http: HttpSecurity?) {
 }
 ```
 
+#### Configure OAuth 2.0 Resource Server
+
+- `oauth2ResourceServer()`
+  - `jwt()`
+  - `opaqueToken()`
+
+```kotlin
+override fun configure(http: HttpSecurity?) {
+    http?.authorizeRequests()
+            ?.antMatchers("/security")?.authenticated()
+            ?.and()
+            ?.oauth2ResourceServer()?.jwt()
+}
+```
 
 ## Demo
 
