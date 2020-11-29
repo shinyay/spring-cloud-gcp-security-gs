@@ -20,8 +20,9 @@ class HelloController {
     }
 
     @GetMapping("/security")
-    fun securedAccess() {
+    fun securedAccess(): String {
         val authentication = SecurityContextHolder.getContext().authentication
         val jwt: Jwt = authentication.principal as Jwt
+        return "[$jwt.subject]:[${jwt.getClaimAsString("email")}]"
     }
 }
