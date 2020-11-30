@@ -55,6 +55,7 @@ val APP_TAG = if (hasProperty("app_tag")) findProperty("app_tag") as String else
 
 jib {
 	to {
+		//image = "gcr.io/$GCP_PROJECT_ID/$APP_NAME:$APP_TAG"
 		image = "us-central1-docker.pkg.dev/$GCP_PROJECT_ID/$REGISTRY_NAME/$APP_NAME:$APP_TAG"
 		tags = setOf("0.0.1")
 	}
