@@ -132,6 +132,11 @@ $ gcloud artifacts repositories list
 $ gcloud auth configure-docker --include-artifact-registry
 ```
 
+### Generate Gradle Property for Jib Build
+```shell script
+$ ./script/generate-gradle-props.fish
+```
+
 ### Build with Jib
 ```shell script
 $ ./gradlew clean jib
