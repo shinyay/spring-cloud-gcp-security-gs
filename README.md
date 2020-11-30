@@ -102,6 +102,16 @@ val jwt: Jwt = authentication.principal as Jwt
 
 ## Demo
 
+### Authenticate for Jib
+```shell script
+$ gcloud auth configure-docker --include-artifact-registry
+```
+
+### Build with Jib
+```shell script
+$ ./gradlew clean jib
+```
+
 ## Features
 
 - feature:1
