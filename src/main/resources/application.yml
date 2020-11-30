@@ -1,1 +1,6 @@
-
+spring:
+  cloud:
+    gcp:
+      security:
+        iap:
+          audience: /projects/1094611386598/global/backendServices/323794236536435905
