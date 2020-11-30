@@ -112,6 +112,11 @@ $ gcloud auth configure-docker --include-artifact-registry
 $ ./gradlew clean jib
 ```
 
+### Deploy App to GKE
+```shell script
+$ sed -e "s|GCP_PROJECT|"(gcloud config get-value project)"|g" k8s/deploy-app.yml | kubectl apply -f -
+```
+
 ## Features
 
 - feature:1
