@@ -20,6 +20,6 @@ spec:
         app: app
     spec:
       containers:
-        - image: "us-central1-docker.pkg.dev/GCP_PROJECT/container/demo-app:0.0.1"
+        - image: "us-central1-docker.pkg.dev/GCP_PROJECT/shinyay-container/demo-app:0.0.1"
           imagePullPolicy: Always
           name: app
