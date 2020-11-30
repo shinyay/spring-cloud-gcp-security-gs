@@ -100,6 +100,20 @@ val authentication = SecurityContextHolder.getContext().authentication
 val jwt: Jwt = authentication.principal as Jwt
 ```
 
+### Configure Audience from Identity-Aware Proxy
+- [Identity-Aware Proxy](https://console.cloud.google.com/security/iap/?_ga=2.114350786.495858175.1606693674-983599867.1599137884&_gac=1.247115382.1604543893.CjwKCAiAv4n9BRA9EiwA30WND9tYKNMuLjYNlsSBrI4JO3KyW7Wkyj7T5SL10VmdwDs8jNxCe6vRoxoChh0QAvD_BwE)
+
+![Signed Header JWT Audience](https://user-images.githubusercontent.com/3072734/100560482-43c28880-32f9-11eb-8ffb-34179ca00808.png)
+
+```yaml
+spring:
+  cloud:
+    gcp:
+      security:
+        iap:
+          audience: /projects/1094611386598/global/backendServices/323794236536435905
+```
+
 ## Demo
 
 ### Authenticate for Jib
