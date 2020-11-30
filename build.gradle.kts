@@ -47,3 +47,18 @@ tasks.withType<KotlinCompile> {
 		jvmTarget = "11"
 	}
 }
+
+val GCP_PROJECT_ID = if (hasProperty("gcp_project_id")) findProperty("gcp_project_id") as String else "library"
+val REGISTRY_NAME = if (hasProperty("registry_name")) findProperty("registry_name") as String else "container"
+val APP_NAME = if (hasProperty("app_name")) findProperty("app_name") as String else "demo-app"
+val APP_TAG = if (hasProperty("app_tag")) findProperty("app_tag") as String else "0.0.1"
+
+jib {
+	to {
+		image = "us-central1-docker.pkg.dev/$GCP_PROJECT_ID/$REGISTRY_NAME/$APP_NAME:$APP_TAG"
+		tags = setOf("0.0.1")
+	}
+	container {
+		jvmFlags = mutableListOf("-Xms512m", "-Xdebug")
+	}
+}
