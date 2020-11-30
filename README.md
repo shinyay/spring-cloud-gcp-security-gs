@@ -118,6 +118,15 @@ spring:
 
 ## Demo
 
+### Create Artifact Registry
+```shell script
+$ gcloud artifacts repositories create shinyay-container --location us-central1 --repository-format docker
+```
+
+```shell script
+$ gcloud artifacts repositories list
+```
+
 ### Authenticate for Jib
 ```shell script
 $ gcloud auth configure-docker --include-artifact-registry
